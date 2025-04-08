@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Coffee Products - Digital Espresso</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #D7CCC8;
+      color: #3E2723;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #3E2723;
+      padding: 10px 20px;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #4E342E;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-top: 1px solid #6D4C41;
+    }
+
+    nav a:hover {
+      background-color: #6D4C41;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    th, td {
+      padding: 15px;
+      border-bottom: 1px solid #ccc;
+      text-align: left;
+    }
+
+    th {
+      background-color: #6D4C41;
+      color: white;
+    }
+
+    td img {
+      width: 100px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    td a {
+      color: #3E2723;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    td a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #3E2723;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media(min-width: 768px) {
+      nav {
+        display: flex !important;
+        flex-direction: row;
+      }
+      .menu-icon {
+        display: none;
+      }
+      nav a {
+        border-top: none;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Digital Espresso Logo.jpg" alt="Digital Espresso Logo" />
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="nav-menu">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="branches.html">Branches</a>
+  <a href="aboutus.html">About</a>
+</nav>
+
+<div class="container">
+  <h1>Our Coffee Products</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Image</th>
+        <th>Product Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><img src="Caramel Latte.jpg" alt="Caramel Latte"></td>
+        <td><a href="caramel-latte.html">Caramel Latte</a></td>
+        <td>Rich espresso combined with steamed milk and caramel syrup.</td>
+      </tr>
+      <tr>
+        <td><img src="Espresso.webp" alt="Classic Espresso"></td>
+        <td><a href="classic-espresso.html">Classic Espresso</a></td>
+        <td>Strong and smooth shot of our finest brewed espresso.</td>
+      </tr>
+      <tr>
+        <td><img src="Mocha Latte.jpeg" alt="Mocha Latte"></td>
+        <td><a href="mocha-latte.html">Mocha Latte</a></td>
+        <td>Decadent blend of espresso, chocolate, and steamed milk.</td>
+      </tr>
+      <tr>
+        <td><img src="Flat White.webp" alt="Flat White"></td>
+        <td><a href="flat-white.html">Flat White</a></td>
+        <td>Velvety microfoam layered over bold espresso for a smooth sip.</td>
+      </tr>
+      <tr>
+        <td><img src="Americano.jpeg" alt="Americano"></td>
+        <td><a href="americano.html">Americano</a></td>
+        <td>Espresso with hot water for a lighter, more classic taste.</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<footer>
+  <p>&copy; 2025 Digital Espresso. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("nav-menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+  }
+</script>
+
+</body>
+</html>

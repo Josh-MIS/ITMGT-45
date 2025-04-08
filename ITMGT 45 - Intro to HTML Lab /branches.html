@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Branches - Digital Espresso</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #D7CCC8;
+      color: #2E2E2E;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 20px;
+      background-color: #3E2723;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+      display: block;
+      color: white;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #4E342E;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-top: 1px solid #6D4C41;
+    }
+
+    nav a:hover {
+      background-color: #6D4C41;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .branch-section {
+      margin-bottom: 40px;
+    }
+
+    .flex-row {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .flex-row img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+    }
+
+    .branch-info {
+      max-width: 600px;
+    }
+
+    footer {
+      background-color: #3E2723;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      color: white;
+    }
+
+    @media(min-width: 768px) {
+      nav {
+        display: flex !important;
+        flex-direction: row;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+
+      nav a {
+        border-top: none;
+        padding: 10px 20px;
+      }
+
+      .flex-row {
+        flex-direction: row;
+        justify-content: center;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .flex-row.alt {
+        flex-direction: row-reverse;
+      }
+
+      .branch-info {
+        flex: 1;
+        padding: 0 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Digital Espresso Logo.jpg" alt="Digital Espresso Logo" />
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="nav-menu">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="branches.html">Branches</a>
+  <a href="aboutus.html">About</a>
+</nav>
+
+<div class="content">
+
+  <h1>Our Branches</h1>
+
+  <div class="branch-section flex-row">
+    <img src="Branch 1.jpeg" alt="Manila Branch">
+    <div class="branch-info">
+      <h2>Manila Branch</h2>
+      <p>Address: 123 Espresso St., Ermita, Manila</p>
+      <p>Contact: (02) 1234-5678</p>
+    </div>
+  </div>
+
+  <div class="branch-section flex-row alt">
+    <img src="Branch 2.jpg" alt="Cebu Branch">
+    <div class="branch-info">
+      <h2>Cebu Branch</h2>
+      <p>Address: IT Park, Lahug, Cebu City</p>
+      <p>Contact: (032) 2345-6789</p>
+    </div>
+  </div>
+
+  <div class="branch-section flex-row">
+    <img src="Branch 3.jpeg" alt="Davao Branch">
+    <div class="branch-info">
+      <h2>Davao Branch</h2>
+      <p>Address: JP Laurel Ave., Bajada, Davao City</p>
+      <p>Contact: (082) 3456-7890</p>
+    </div>
+  </div>
+
+  <div class="branch-section flex-row alt">
+    <img src="Branch 4.jpeg" alt="Baguio Branch">
+    <div class="branch-info">
+      <h2>Baguio Branch</h2>
+      <p>Address: Session Road, Baguio City</p>
+      <p>Contact: (074) 4567-8901</p>
+    </div>
+  </div>
+
+  <div class="branch-section flex-row">
+    <img src="Branch 1.jpeg" alt="Iloilo Branch">
+    <div class="branch-info">
+      <h2>Iloilo Branch</h2>
+      <p>Address: SM City Iloilo, Mandurriao</p>
+      <p>Contact: (033) 5678-9012</p>
+    </div>
+  </div>
+
+  <div class="branch-section flex-row alt">
+    <img src="Branch 2.jpg" alt="Cagayan de Oro Branch">
+    <div class="branch-info">
+      <h2>Cagayan de Oro Branch</h2>
+      <p>Address: Limketkai Center, CDO</p>
+      <p>Contact: (088) 6789-0123</p>
+    </div>
+  </div>
+
+  <div class="branch-section flex-row">
+    <img src="Branch 3.jpeg" alt="Zamboanga Branch">
+    <div class="branch-info">
+      <h2>Zamboanga Branch</h2>
+      <p>Address: La Purisima Street, Zamboanga City</p>
+      <p>Contact: (062) 7890-1234</p>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Digital Espresso. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("nav-menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+  }
+</script>
+
+</body>
+</html>

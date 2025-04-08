@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flat White - Digital Espresso</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #D7CCC8;
+      color: #3E2723;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #3E2723;
+      padding: 10px 20px;
+    }
+
+    header img {
+      height: 50px;
+    }
+
+    .menu-icon {
+      font-size: 30px;
+      cursor: pointer;
+      color: white;
+    }
+
+    nav {
+      display: none;
+      flex-direction: column;
+      background-color: #4E342E;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 12px;
+      border-top: 1px solid #6D4C41;
+    }
+
+    nav a:hover {
+      background-color: #6D4C41;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .product-img {
+      width: 100%;
+      max-width: 400px;
+      display: block;
+      margin: 0 auto 20px;
+      border-radius: 10px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .price-options {
+      margin-top: 20px;
+    }
+
+    .price-options table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    .price-options th, .price-options td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #3E2723;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #3E2723;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media(min-width: 768px) {
+      nav {
+        display: flex !important;
+        flex-direction: row;
+      }
+
+      .menu-icon {
+        display: none;
+      }
+
+      nav a {
+        border-top: none;
+        padding: 10px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="Digital Espresso Logo.jpg" alt="Digital Espresso Logo" />
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="nav-menu">
+  <a href="index.html">Home</a>
+  <a href="products.html">Products</a>
+  <a href="branches.html">Branches</a>
+  <a href="aboutus.html">About</a>
+</nav>
+
+<div class="container">
+  <h1>Flat White</h1>
+  <img src="Flat White.webp" alt="Flat White" class="product-img">
+
+  <p>
+    The Flat White is a velvety, creamy espresso drink made with smooth steamed milk and a rich shot of espresso. 
+    Perfect for those who enjoy a balanced, less frothy coffee experience.
+  </p>
+
+  <div class="price-options">
+    <h2>Sizes & Prices</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Size</th>
+          <th>Hot</th>
+          <th>Iced</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Small</td>
+          <td>₱120</td>
+          <td>₱130</td>
+        </tr>
+        <tr>
+          <td>Large</td>
+          <td>₱140</td>
+          <td>₱150</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="products.html" class="back-link">← Back to Products</a>
+</div>
+
+<footer>
+  <p>&copy; 2025 Digital Espresso. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("nav-menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+  }
+</script>
+
+</body>
+</html>
